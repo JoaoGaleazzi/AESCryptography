@@ -29,14 +29,18 @@
         private void InitializeComponent()
         {
             TxtBoxKey = new TextBox();
-            TxtBoxFileName = new TextBox();
+            TxtBoxFileNameInput = new TextBox();
             BtnEncprypt = new Button();
             BtnDecrypt = new Button();
-            richTextBox1 = new RichTextBox();
-            openFileArquivo = new OpenFileDialog();
+            openFileArquivoEntrada = new OpenFileDialog();
             LabelChave = new Label();
             LabelArquivo = new Label();
             LabelOutput = new Label();
+            TxtBoxFileNameOutput = new TextBox();
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog2 = new OpenFileDialog();
+            openFileDialog3 = new OpenFileDialog();
+            openFileArquivoSaida = new OpenFileDialog();
             SuspendLayout();
             // 
             // TxtBoxKey
@@ -48,15 +52,15 @@
             TxtBoxKey.Size = new Size(532, 23);
             TxtBoxKey.TabIndex = 0;
             // 
-            // TxtBoxFileName
+            // TxtBoxFileNameInput
             // 
-            TxtBoxFileName.Cursor = Cursors.Hand;
-            TxtBoxFileName.Location = new Point(37, 134);
-            TxtBoxFileName.Name = "TxtBoxFileName";
-            TxtBoxFileName.ReadOnly = true;
-            TxtBoxFileName.Size = new Size(532, 23);
-            TxtBoxFileName.TabIndex = 1;
-            TxtBoxFileName.Click += TxtBoxFileName_Click;
+            TxtBoxFileNameInput.Cursor = Cursors.Hand;
+            TxtBoxFileNameInput.Location = new Point(37, 134);
+            TxtBoxFileNameInput.Name = "TxtBoxFileNameInput";
+            TxtBoxFileNameInput.ReadOnly = true;
+            TxtBoxFileNameInput.Size = new Size(532, 23);
+            TxtBoxFileNameInput.TabIndex = 1;
+            TxtBoxFileNameInput.Click += TxtBoxFileName_Click;
             // 
             // BtnEncprypt
             // 
@@ -78,18 +82,10 @@
             BtnDecrypt.UseVisualStyleBackColor = true;
             BtnDecrypt.Click += BtnDecrypt_Click;
             // 
-            // richTextBox1
+            // openFileArquivoEntrada
             // 
-            richTextBox1.Location = new Point(37, 278);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(532, 96);
-            richTextBox1.TabIndex = 5;
-            richTextBox1.Text = "";
-            // 
-            // openFileArquivo
-            // 
-            openFileArquivo.FileName = "openFileArquivo";
-            openFileArquivo.FileOk += openFileDialog1_FileOk;
+            openFileArquivoEntrada.FileName = "openFileArquivoEntrada";
+            openFileArquivoEntrada.FileOk += openFileDialog1_FileOk;
             // 
             // LabelChave
             // 
@@ -118,18 +114,33 @@
             LabelOutput.TabIndex = 8;
             LabelOutput.Text = "Output";
             // 
+            // TxtBoxFileNameOutput
+            // 
+            TxtBoxFileNameOutput.Cursor = Cursors.Hand;
+            TxtBoxFileNameOutput.Location = new Point(37, 278);
+            TxtBoxFileNameOutput.Name = "TxtBoxFileNameOutput";
+            TxtBoxFileNameOutput.ReadOnly = true;
+            TxtBoxFileNameOutput.Size = new Size(532, 23);
+            TxtBoxFileNameOutput.TabIndex = 9;
+            TxtBoxFileNameOutput.Click += TxtBoxFileNameOutput_Click;
+            // 
+            // openFileArquivoSaida
+            // 
+            openFileArquivoSaida.FileName = "openFileArquivoSaida";
+            openFileArquivoSaida.FileOk += openFileArquivoSaida_FileOk;
+            // 
             // MainScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(TxtBoxFileNameOutput);
             Controls.Add(LabelOutput);
             Controls.Add(LabelArquivo);
             Controls.Add(LabelChave);
-            Controls.Add(richTextBox1);
             Controls.Add(BtnDecrypt);
             Controls.Add(BtnEncprypt);
-            Controls.Add(TxtBoxFileName);
+            Controls.Add(TxtBoxFileNameInput);
             Controls.Add(TxtBoxKey);
             Name = "MainScreen";
             Text = "Form1";
@@ -141,13 +152,18 @@
         #endregion
 
         private TextBox TxtBoxKey;
-        private TextBox TxtBoxFileName;
+        private TextBox TxtBoxFileNameInput;
         private Button BtnEncprypt;
         private Button BtnDecrypt;
         private RichTextBox richTextBox1;
-        private OpenFileDialog openFileArquivo;
+        private OpenFileDialog openFileArquivoEntrada;
         private Label LabelChave;
         private Label LabelArquivo;
         private Label LabelOutput;
+        private TextBox TxtBoxFileNameOutput;
+        private OpenFileDialog openFileDialog1;
+        private OpenFileDialog openFileDialog2;
+        private OpenFileDialog openFileDialog3;
+        private OpenFileDialog openFileArquivoSaida;
     }
 }

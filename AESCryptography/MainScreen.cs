@@ -24,12 +24,22 @@ namespace AESCryptography
 
         private void TxtBoxFileName_Click(object sender, EventArgs e)
         {
-            this.openFileArquivo.ShowDialog();
+            this.openFileArquivoEntrada.ShowDialog();
         }
 
         private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            this.TxtBoxFileName.Text = this.openFileArquivo.FileName;
+            this.TxtBoxFileNameInput.Text = this.openFileArquivoEntrada.FileName;
+        }
+
+        private void TxtBoxFileNameOutput_Click(object sender, EventArgs e)
+        {
+            this.openFileArquivoSaida.ShowDialog();
+        }
+
+        private void openFileArquivoSaida_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.TxtBoxFileNameOutput.Text = this.openFileArquivoSaida.FileName;
         }
     }
 }
