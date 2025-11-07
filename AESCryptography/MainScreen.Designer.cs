@@ -47,7 +47,6 @@
             // 
             TxtBoxKey.Location = new Point(37, 76);
             TxtBoxKey.Name = "TxtBoxKey";
-            TxtBoxKey.ReadOnly = true;
             TxtBoxKey.ScrollBars = ScrollBars.Vertical;
             TxtBoxKey.Size = new Size(532, 23);
             TxtBoxKey.TabIndex = 0;
